@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Milonga&family=Mulish&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Milonga&family=Mulish&family=Redressed&family=Roboto&display=swap');
 
 * {
     position: relative;
     background: #1A1A1B;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -17,11 +18,14 @@ html {
 }
 
 .navBar {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: 100px;
     left: 0px;
     top: 0px;
+    position: fixed;
+    z-index: 10;
+    user-select: none;
 }
 
 nav {
@@ -63,10 +67,33 @@ nav ul li {
     order: 0;
     flex-grow: 0;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: white;
 }
+
+nav ul li.active::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    /* background-color: #e91e63; */
+    background-color: rgb(0, 213, 255);
+    border-radius: 50%; 
+    animation: apper 0.3s linear;
+}
+@keyframes apper {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
 
 .services {
     margin-right: 23px;
@@ -78,6 +105,7 @@ nav ul li a{
     height: 500px;
     left: 0px;
     top: 100px;
+    user-select: none;
 }
 
 #name {
@@ -221,4 +249,361 @@ nav ul li a{
         transform: translateY(15px);
         opacity: 0;
     }
+}
+
+#about {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    left: 0px;
+    top: 600px;
+}
+
+.devImg {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    left: 372px;
+    top: 56px;
+}
+
+.bgImg {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    left: 90px;
+    top: 0px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #3FAA3D 32.3%, #FF04AA 82.3%);
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 15px;
+    gap: 29px;
+    position: absolute;
+    width: 752px;
+    height: 171px;
+    left: 118px;
+    top: 403px;
+}
+
+#profile h1 {
+    width: 502px;
+    height: 50px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#profile p {
+    width: 722px;
+    height: 92px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#moreInfo {
+    position: absolute;
+    width: 930px;
+    height: 370px;
+    left: 128px;
+    top: 666px;
+    /* background-color: blue; */
+}
+
+#moreInfo #infoDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+    position: absolute;
+    width: 359px;
+    height: 256px;
+    left: 0px;
+    top: 57px;
+}
+
+#moreInfo #infoDiv #location {
+    width: 319px;
+    height: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#moreInfo #infoDiv #age {
+    width: 319px;
+    height: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#moreInfo #infoDiv #phone {
+    width: 319px;
+    height: 24px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+#moreInfo #infoDiv #email {
+    width: 319px;
+    height: 24px;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.elips {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: -6px;
+    top: -6px;
+    border-radius: 50%;
+    background: #D9D9D9;
+}
+
+#moreInfo #infoDiv #location p {
+    position: absolute;
+    width: 280px;
+    height: 23px;
+    left: 39px;
+    top: 0px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+#moreInfo #infoDiv #age p {
+    position: absolute;
+    width: 70px;
+    height: 23px;
+    left: 39px;
+    top: 0px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+#moreInfo #infoDiv #phone p {
+    position: absolute;
+    width: 218px;
+    height: 23px;
+    left: 39px;
+    top: 0px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+#moreInfo #infoDiv #email p {
+    position: absolute;
+    width: 246px;
+    height: 23px;
+    left: 39px;
+    top: 0px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.elips .fa-solid {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+    padding: 10px 0 0 10px;
+    background: none;
+}
+
+#proBars {
+    /* width: 440px; */
+    height: 370px;
+    /* background-color: green; */
+    display: flex;
+    float: right;
+}
+
+.skills {
+    width: 440px;
+}
+
+.skills h2 {
+    font-weight: 400px;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.progressBar {
+    background-color: #959595;
+    width: 400px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progressBar div {
+    width: 0%;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progressBar div span {
+    background-color: #222;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: right;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15px;
+    margin-right: -20px;
+}
+
+.html {
+    background-color: #e91e63;
+    animation: html 1s linear forwards;
+}
+
+.javascript {
+    background-color: #cddc39;
+    animation: javascript 1s linear forwards;
+}
+
+.php {
+    background-color: #00bcd4;
+    animation: php 1s linear forwards;
+}
+
+.react {
+    background-color: #ffeb3b;
+    animation: react 1s linear forwards;
+}
+
+.c {
+    background-color: #9c27b0;
+    animation: c 1s linear forwards;
+}
+
+.html span {
+    border: 1px solid #e91e63;
+}
+
+.javascript span {
+    border: 1px solid #cddc39;
+}
+
+.php span {
+    border: 1px solid #00bcd4;
+}
+
+.react span {
+    border: 1px solid #ffeb3b;
+}
+
+.c span {
+    border: 1px solid #9c27b0;
+}
+
+@keyframes html {
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes javascript {
+    100% {
+        width: 65%;
+    }
+}
+
+@keyframes php {
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes react {
+    100% {
+        width: 19%;
+    }
+}
+
+@keyframes c {
+    100% {
+        width: 25%;
+    }
+}
+
+#btnCV {
+    position: absolute;
+    width: 241px;
+    height: 68px;
+    left: 470px;
+    top: 1120px;
+}
+
+#btnCV button {
+    position: absolute;
+    width: 241px;
+    height: 68px;
+    left: 0px;
+    top: 0px;
+    background: #00C2FF;
+    border-radius: 16px;
+    font-family: 'Redressed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
 }

@@ -5,9 +5,12 @@
     <title>Krrish Halder | Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./images/ms-icon-310x310.png" rel="icon">
+    <link href="./images/favicon.ico" rel="icon">
     <link href="style.css" rel="stylesheet">
-    <!-- <link href="responsive.css" rel="stylesheet"> -->
+    <link href="responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -19,15 +22,15 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
+                <li class="active home"><a href="#home">HOME</a></li>
+                <li class="about" ><a href="#about">ABOUT</a></li>
                 <li class="services"><a href="#services">SERVICES</a></li>
-                <li><a href="#works">WORKS</a></li>
-                <li><a href="#contacts">CONTACTS</a></li>
+                <li class="work"><a href="#works">WORKS</a></li>
+                <li class="contacta"><a href="#contacts">CONTACTS</a></li>
             </ul>
         </nav>
     </div>
-    <div id="home">
+    <section id="home">
         <h1 id="name">Hi! I'm Krrish Halder</h1>
         <div class="wrapper">
             <div class="static-txt">I'm a</div>
@@ -47,8 +50,75 @@
                 </div>
             </a>
         </div>
-    </div>
-
+    </section>
+    <section id="about">
+        <div class="devImg">
+            <div class="bgImg"></div>
+        </div>
+        <div id="profile">
+            <h1>Hi There I'm Krrish Halder</h1>
+            <p>I'm 16 years old creative web desginer and also web developer based on India,<br>
+                I'm also a full-stack developer I build clean, appealing, and functional interfaces which<br>
+                comply with the latest web standards. And not only web related things I also <br>
+                do programming and specializing logical oprations, and begginer investe.</p>
+        </div>
+        <div id="moreInfo">
+            <div id="infoDiv">
+                <div id="location">
+                    <div class="elips">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <p>Location : Vadodara, Gujrat, India</p>
+                </div>
+                <div id="age">
+                    <div class="elips">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <p>Age : 16</p>
+                </div>
+                <div id="phone">
+                    <div class="elips">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <p>Phone : +91 72290 06604</p>
+                </div>
+                <div id="email">
+                    <div class="elips">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <p>Email : krrish.h36@gmail.com</p>
+                </div>
+            </div>
+            <div id="proBars">
+                <div class="skills">
+                    <h2>HTML/CSS</h2>
+                    <div class="progressBar">
+                        <div class="html"><span>90%</span></div>
+                    </div>
+                    <h2>javascript</h2>
+                    <div class="progressBar">
+                        <div class="javascript"><span>65%</span></div>
+                    </div>
+                    <h2>PHP/MySql</h2>
+                    <div class="progressBar">
+                        <div class="php"><span>85</span></div>
+                    </div>
+                    <h2>React JS</h2>
+                    <div class="progressBar">
+                        <div class="react"><span>19%</span></div>
+                    </div>
+                    <h2>C</h2>
+                    <div class="progressBar">
+                        <div class="c"><span>25%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="btnCV">
+            <button>Download CV</button>
+        </div>
+    </section>
+<script src="script.js"></script>
 </body>
 
 
