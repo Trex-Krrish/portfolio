@@ -24,3 +24,23 @@ window.addEventListener('scroll', ()=>{
         }
     })
 })
+
+let calcScrollValue = () =>{
+    let scrollProgress = document.getElementById("goTop");
+    let progressvalue = document.getElementById('progress-value');
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollvalue = Math.round((pos * 100) / calcHeight);
+    if (pos > 100) {
+        scrollProgress.style.display = "grid";
+    } else {
+        scrollProgress.style.display = "none";        
+    }
+    scrollProgress.addEventListener("click", ()=>{
+        document.documentElement.scrollTop = 0;
+    })
+    scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollvalue}%, #d7d7d7 ${scrollvalue}%)`
+}
+
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;

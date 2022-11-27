@@ -1,0 +1,13 @@
+@media only screen and (max-width: 1024px)  and (min-width: 769px){
+    * {
+        width: 1024px;
+        position: relative;
+        background: #1A1A1B;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+}

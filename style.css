@@ -82,21 +82,51 @@ nav ul li.active::after {
     bottom: -10px;
     /* background-color: #e91e63; */
     background-color: rgb(0, 213, 255);
-    border-radius: 50%; 
+    border-radius: 50%;
     animation: apper 0.3s linear;
 }
+
 @keyframes apper {
-    from{
+    from {
         width: 0%;
     }
-    to{
+
+    to {
         width: 100%;
     }
 }
 
-
 .services {
     margin-right: 23px;
+}
+
+#goTop {
+    background-color: #03cc65;
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 20px;
+    right: 10px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    z-index: 90;
+    cursor: pointer;
+}
+
+#progress-value {
+    display: block;
+    background-color: white;
+    border-radius: 50%;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #001a2e;
+}
+#progress-value i{
+    background: none;
 }
 
 #home {
