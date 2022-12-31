@@ -89,7 +89,7 @@ body {
 }
 #navBar nav ul #menuBars {
   color: #FFFFFF;
-  display: inline-block;
+  display: none;
 }
 #navBar nav ul #menuBars i {
   width: auto;

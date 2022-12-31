@@ -61,6 +61,7 @@ body {
             margin-right: 70px;
 
             li {
+                // display: none;
                 width: auto;
                 height: 25px;
                 cursor: pointer;
@@ -99,7 +100,8 @@ body {
 
             #menuBars {
                 color: #FFFFFF;
-                display: inline-block;
+                // display: inline-block;
+                display: none;
 
                 i {
                     width: auto;
