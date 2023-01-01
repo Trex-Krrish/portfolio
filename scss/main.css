@@ -37,6 +37,8 @@ body {
   width: 100px;
   z-index: 1;
   float: left;
+  -webkit-animation: swirl-in-fwd 0.6s ease-out both;
+          animation: swirl-in-fwd 0.6s ease-out both;
 }
 #navBar nav {
   position: absolute;
@@ -96,6 +98,27 @@ body {
   height: auto;
 }
 
+@-webkit-keyframes swirl-in-fwd {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes swirl-in-fwd {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes apper {
   from {
     width: 0%;
@@ -104,7 +127,6 @@ body {
     width: 100%;
   }
 }
-
 @keyframes apper {
   from {
     width: 0%;
@@ -142,6 +164,17 @@ body {
   background: none;
 }
 
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.activeRev {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 #home {
   position: absolute;
   width: 100%;
@@ -173,8 +206,35 @@ body {
   letter-spacing: -0.01em;
   color: #FFFFFF;
   margin: 20px 0;
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .wrapper {
   display: flex;
   height: 150px;
@@ -401,6 +461,7 @@ body {
   height: 370px;
   /* left: 128px; */
   top: 666px;
+  font-family: "Mulish";
   /* background-color: blue; */
 }
 #moreInfo #infoDiv {
@@ -694,15 +755,17 @@ body {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  border: none;
+  transition: width 0.5s;
 }
-
-.reveal {
-  transform: translateY(150px);
-  opacity: 0;
-  transition: all 2s ease;
+#btnCV button i {
+  padding-left: 20px;
+  display: none;
 }
-
-.reveal.activeRev {
-  transform: translateY(0px);
-  opacity: 1;
+#btnCV button:hover {
+  background: #375f6b;
+  width: 250px;
+}
+#btnCV button:hover i {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

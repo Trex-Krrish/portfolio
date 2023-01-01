@@ -1,4 +1,4 @@
-# /images
-# *.css
+/images
+*.css
 *.map
 /css
