@@ -231,9 +231,17 @@ body {
           animation: typing 3s steps(10) infinite;
 }
 
-@-webkit-keyframes slide {}
+@-webkit-keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
 
-@keyframes slide {}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
 @-webkit-keyframes typing {
   40%, 60% {
     left: calc(100% + 30px);
@@ -320,6 +328,7 @@ body {
   top: 600px;
   display: flex;
   margin-top: 30px;
+  background: url(../images/Moon.svg);
 }
 
 .devImg {
@@ -329,6 +338,7 @@ body {
   height: 280px;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .bgImg {
@@ -684,4 +694,15 @@ body {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+}
+
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.activeRev {
+  transform: translateY(0px);
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */

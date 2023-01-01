@@ -1,8 +1,8 @@
 let navLi = document.querySelectorAll("ul li");
 navLi.forEach((item) => {
     item.addEventListener('click', ()=>{
-        document.querySelector("li.active").classList.remove("active");
-        item.classList.add('active');
+        document.querySelector("li.activeRev").classList.remove("activeRev");
+        item.classList.add('activeRev');
     })
 });
 
@@ -18,9 +18,9 @@ window.addEventListener('scroll', ()=>{
         }
     })
     navLi.forEach(li =>{
-        li.classList.remove('active');
+        li.classList.remove('activeRev');
         if (li.classList.contains(current)) {
-            li.classList.add('active')
+            li.classList.add('activeRev')
         }
     })
 })
@@ -41,6 +41,22 @@ let calcScrollValue = () =>{
     })
     scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollvalue}%, #d7d7d7 ${scrollvalue}%)`
 }
-
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+window.addEventListener('scroll', revel);
+
+function revel(){
+    let reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+        let windowheight = window.innerHeight;
+        let revealtop = reveals[i].getBoundingClientRect().top;
+        let revealpoint = 100;
+        if (revealtop < windowheight - revealpoint) {
+            reveals[i].classList.add('activeRev');
+        }
+        else {
+            reveals[i].classList.add('.activeRev');
+        }
+    }
+}

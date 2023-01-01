@@ -258,7 +258,7 @@ body {
 
 @keyframes slide {
     100% {
-        // top:/ -360px;
+        top: -360px;
     }
 }
 
@@ -335,6 +335,7 @@ body {
     top: 600px;
     display: flex;
     margin-top: 30px;
+    background: url(../images/Moon.svg);
 }
 
 .devImg {
@@ -346,6 +347,7 @@ body {
     // top: 56px;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .bgImg {
@@ -706,4 +708,15 @@ body {
         align-items: center;
         justify-content: center;
     }
+}
+
+.reveal{
+    // position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.activeRev{
+    transform: translateY(0px);
+    opacity: 1;
 }
